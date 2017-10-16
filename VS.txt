@@ -1,0 +1,12 @@
+问题:2017-10-16:
+    VS2017,fluid_v3
+    warning MSB8004: Intermediate 目录未以斜杠结尾。此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Intermediate 目录。
+思路:项目 - 属性 - 配置属性 - 常规 - “输出目录”和“中间目录”的路径必须以反斜杠\结尾。
+方法:原“中间目录”为“$(Platform)\$(Configuration)”，改为“$(Platform)\$(Configuration)\”后该警告消除。
+
+问题:2017-10-16:
+    VS2017,fluid_v3
+    Performing Custom Build Tools
+    系统找不到指定的路径。
+思路:由于提供的信息过少,故令报错展开
+方法:工具->选项->项目和解决方案->生成并运行->MSBuild项目生成输出详细级别->详细
